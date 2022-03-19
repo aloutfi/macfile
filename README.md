@@ -1,4 +1,4 @@
-# Macfile
+# Macfile: like Dockerfile but for your new mac.
 
 A simple repo to provide functionality for configuring a new mac for development.
 
