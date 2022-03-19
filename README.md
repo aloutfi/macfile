@@ -8,7 +8,8 @@ A simple repo to provide functionality for configuring a new mac for development
 1. Fill in github user, email, and org in macfile.sh
 2. Ensure zsh is already installed (default shell on MacOS 12)
 3. Check to see if anything has been installed already.
-4. run './macfile.sh'
+4. run `./macfile.sh`
+   - obviously, this needs to be executable.
 
 # TODO:
 I will probably not get all of these, but it's a list of config I'll need to do anyways.
@@ -27,4 +28,3 @@ I will probably not get all of these, but it's a list of config I'll need to do 
 - copy: 
     - vimrc
     - ssh config
-    
