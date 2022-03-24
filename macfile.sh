@@ -32,6 +32,7 @@ brew tap textualize/rich
 
 formulae=(
   docker
+  google-cloud-sdk
   htop
   jupyterlab
   netcat
@@ -52,6 +53,8 @@ formulae=(
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
+
+brew install ${formulae[@]}
 
 
 # Install casks
