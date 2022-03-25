@@ -84,6 +84,7 @@ casks=(
   macvim
   notion
   pycharm
+  raycast
   runelite
   signal
   slack
