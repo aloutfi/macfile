@@ -28,6 +28,9 @@ echo "Git config"
 git config --global user.name $GITHUB_USER
 git config --global user.email $GITHUB_EMAIL
 
+echo "Install ohmyzsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 brew tap textualize/rich
 
 formulae=(
