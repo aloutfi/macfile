@@ -31,10 +31,15 @@ git config --global user.email $GITHUB_EMAIL
 echo "Install ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+source ~/.zshrc
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 brew tap textualize/rich
 
 formulae=(
   docker
+  fzf
   google-cloud-sdk
   htop
   jupyterlab
@@ -53,12 +58,12 @@ formulae=(
   tree
   wget
   youtube-dl
-  zsh-syntax-highlighting
-  zsh-autosuggestions
 )
 
 brew install ${formulae[@]}
 
+# Enable useful key bindings and fuzzy completion
+$(brew --prefix)/opt/fzf/install
 
 # Install casks
 ### Get cask-versions for brave-browser-nightly
@@ -72,7 +77,9 @@ casks=(
   discord
   docker
   eul
+  fig
   google-drive
+  iterm2
   macvim
   notion
   pycharm
