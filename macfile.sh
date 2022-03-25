@@ -78,6 +78,7 @@ casks=(
   docker
   eul
   fig
+  github
   google-drive
   iterm2
   macvim
@@ -208,6 +209,10 @@ defaults write org.m0k.transmission WarningDonate -bool false
 
 #"Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
+
+#"Set clock to digitial and EEE d MMM HH:mm:ss format"
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
 
 killall Finder
 
