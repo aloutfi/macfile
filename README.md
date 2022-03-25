@@ -15,14 +15,12 @@ A simple repo to provide functionality for configuring a new mac for development
 I will probably not get all of these, but it's a list of config I'll need to do anyways.
 - zshrc plugins
 - "open with vs code" macos automator
-- 24 hour clock with seconds
 - have application X always open file Y
 - open terminal from folder
 - set default browser
 - brave browser settings:
     - disable built in password management
     - 1password plugin
-    - import bookmarks
 - cat:
     - zshrc
 - copy: 
