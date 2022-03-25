@@ -214,6 +214,6 @@ defaults write org.m0k.transmission WarningLegal -bool false
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
 
-killall Finder
+killall SystemUIServer Finder
 
 echo "Done!"
