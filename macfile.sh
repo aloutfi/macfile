@@ -7,7 +7,7 @@ GITHUB_ORG = '' # Your GitHub Organization
 
 
 echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+ssh-keygen -t ed25519 -C "${GITHUB_EMAIL}"
 
 echo "Installing xcode-stuff"
 xcode-select --install
