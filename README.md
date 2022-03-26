@@ -22,6 +22,3 @@ I will probably not get all of these, but it's a list of config I'll need to do 
     - 1password plugin
 - cat:
     - zshrc
-- copy: 
-    - vimrc
-    - ssh config
