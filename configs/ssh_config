@@ -1,0 +1,16 @@
+Host * 
+  AddKeysToAgent yes
+  User andrew
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  ForwardAgent Yes
+
+
+###------------<??>-------------###
+
+
+###------------EC2-------------###
+
+
+###------------VBox-------------###
+
