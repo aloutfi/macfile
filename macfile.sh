@@ -1,3 +1,6 @@
+#!/bin/zsh
+set -euo pipefail
+
 GITHUB_EMAIL = ''
 GITHUB_USER = '' # Your GitHub Username
 GITHUB_ORG = '' # Your GitHub Organization
