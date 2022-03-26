@@ -217,7 +217,7 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
 
 
 #"Copy macos automator services"
-cp services/Open\ in\ Visual\ Studio\ Code.workflow ~/Library/Services/
+cp -r services/Open\ in\ Visual\ Studio\ Code.workflow ~/Library/Services/
 
 killall SystemUIServer Finder
 
