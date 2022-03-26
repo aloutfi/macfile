@@ -14,7 +14,6 @@ A simple repo to provide functionality for configuring a new mac for development
 # TODO:
 I will probably not get all of these, but it's a list of config I'll need to do anyways.
 - zshrc plugins
-- "open with vs code" macos automator
 - have application X always open file Y
 - open terminal from folder
 - set default browser

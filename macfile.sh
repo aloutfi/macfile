@@ -215,6 +215,10 @@ defaults write org.m0k.transmission WarningLegal -bool false
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
 
+
+#"Copy macos automator services"
+cp services/Open\ in\ Visual\ Studio\ Code.workflow ~/Library/Services/
+
 killall SystemUIServer Finder
 
 echo "Done!"
