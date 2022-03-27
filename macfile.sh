@@ -1,52 +1,11 @@
 #!/bin/zsh
-set -euo pipefail
 
-GITHUB_EMAIL = ''
-GITHUB_USER = '' # Your GitHub Username
-GITHUB_ORG = '' # Your GitHub Organization
-
-
-echo "Creating an SSH key for you..."
-ssh-keygen -t ed25519 -C "${GITHUB_EMAIL}"
-
-cp configs/ssh_config ~/.ssh/config
-cp configs/vimrc ~/.vimrc
-
-echo "Installing xcode-stuff"
-xcode-select --install
-
-# Check for Homebrew,
-# Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
-# Update homebrew recipes
-echo "Updating homebrew..."
-brew update
-
-echo "Installing Git..."
-brew install git
-
-echo "Git config"
-
-git config --global user.name $GITHUB_USER
-git config --global user.email $GITHUB_EMAIL
-
-echo "Install ohmyzsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-source ~/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-brew tap textualize/rich
+GITHUB_EMAIL="andrew.loutfi@torqata.com"
+GITHUB_USER="aloutfi" # Your GitHub Username
 
 formulae=(
   docker
   fzf
-  google-cloud-sdk
   htop
   jupyterlab
   netcat
@@ -79,19 +38,16 @@ casks=(
   1password
   anki
   brave-browser-nightly
-  deluge
   discord
   docker
   eul
   fig
   github
-  google-drive
   iterm2
   macvim
   notion
   pycharm
   raycast
-  runelite
   signal
   slack
   spotify
@@ -110,9 +66,6 @@ brew cleanup
 
 echo "set up workspace"
 mkdir ~/WorkSpace
-cd ~/WorkSpace
-# https://stackoverflow.com/a/32803025/9637992
-curl "https://api.github.com/orgs/$GITHUB_ORG/repos?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
 
 
 echo "Setting some Mac settings..."
@@ -220,7 +173,6 @@ defaults write org.m0k.transmission WarningLegal -bool false
 #"Set clock to digitial and EEE d MMM HH:mm:ss format"
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
-
 
 #"Copy macos automator services"
 cp -r services/Open\ in\ Visual\ Studio\ Code.workflow ~/Library/Services/
