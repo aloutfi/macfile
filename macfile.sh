@@ -44,6 +44,7 @@ formulae=(
   fzf
   htop
   jupyterlab
+  jq
   netcat
   nmap
   node
