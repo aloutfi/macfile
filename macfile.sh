@@ -56,6 +56,7 @@ formulae=(
   speedtest-cli
   streamlink
   thefuck
+  tilt
   tldr
   tree
   wget
