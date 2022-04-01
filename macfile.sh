@@ -46,6 +46,7 @@ formulae=(
   jupyterlab
   jq
   kubectx
+  kustomize
   netcat
   nmap
   node
