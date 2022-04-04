@@ -95,6 +95,7 @@ casks=(
   slack
   spotify
   tableplus
+  terraform
   typora
   visual-studio-code
   vlc
