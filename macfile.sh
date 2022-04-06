@@ -109,7 +109,7 @@ brew cleanup
 
 
 echo "set up workspace"
-mkdir ~/WorkSpace
+mkdir -p  ~/WorkSpace/notebooks
 cd ~/WorkSpace
 # https://stackoverflow.com/a/32803025/9637992
 curl "https://api.github.com/orgs/$GITHUB_ORG/repos?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
