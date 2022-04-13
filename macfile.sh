@@ -42,6 +42,7 @@ brew tap textualize/rich
 formulae=(
   docker
   fzf
+  gh
   htop
   jupyterlab
   jq
