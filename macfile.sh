@@ -51,6 +51,7 @@ formulae=(
   nmap
   node
   poetry
+  postgresql
   pre-commit
   pyenv
   pyenv-virtualenv
