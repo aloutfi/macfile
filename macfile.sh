@@ -79,6 +79,7 @@ brew tap homebrew/cask-versions
 casks=(
   1password
   anki
+  bettertouchtool
   brave-browser-nightly
   deluge
   discord
