@@ -44,6 +44,7 @@ formulae=(
   fzf
   gh
   htop
+  httpie
   jupyterlab
   jq
   kubectx
