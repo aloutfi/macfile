@@ -92,6 +92,7 @@ casks=(
   iterm2
   macvim
   notion
+  paw
   pycharm
   raycast
   runelite
