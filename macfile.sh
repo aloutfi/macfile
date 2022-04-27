@@ -91,6 +91,7 @@ casks=(
   google-drive
   iterm2
   macvim
+  microsoft-teams
   notion
   paw
   pycharm
