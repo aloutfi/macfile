@@ -81,6 +81,7 @@ casks=(
   1password
   anki
   bettertouchtool
+  bartender
   brave-browser-nightly
   deluge
   discord
