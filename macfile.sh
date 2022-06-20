@@ -47,6 +47,7 @@ formulae=(
   httpie
   jupyterlab
   jq
+  helm
   kubectx
   kustomize
   netcat
