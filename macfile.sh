@@ -3,56 +3,10 @@ set -euo pipefail
 
 GITHUB_EMAIL='mattisso@atd-us.com'
 GITHUB_USER='mattisso'
-# Update homebrew recipes
-echo "Updating homebrew..."
-brew update
 
-echo "Installing Git..."
-brew install git
-
-echo "Git config"
-
-# https://stackoverflow.com/a/60940131
-brew link --overwrite git
-
-git config --global user.name $GITHUB_USER
-git config --global user.email $GITHUB_EMAIL
-
-echo "Install ohmyzsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-source ~/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 brew tap textualize/rich
 
-formulae=(
-  docker
-  gh
-  htop
-  jupyterlab
-  jq
-  helm
-  kubectx
-  kustomize
-  netcat
-  nmap
-  node
-  poetry
-  postgresql
-  pre-commit
-  pyenv
-  pyenv-virtualenv
-  rich
-  speedtest-cli
-  tilt
-  tree
-  terraform
-  wget
-)
-
-brew install ${formulae[@]}
 
 # Install casks
 ### Get cask-versions for brave-browser-nightly
