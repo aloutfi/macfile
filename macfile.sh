@@ -3,17 +3,6 @@ set -euo pipefail
 
 GITHUB_EMAIL='mattisso@atd-us.com'
 GITHUB_USER='mattisso'
-
-
-echo "Creating an SSH key for you..."
-ssh-keygen -t ed25519 -C "${GITHUB_EMAIL}"
-
-cp configs/ssh_config ~/.ssh/config
-cp configs/vimrc ~/.vimrc
-
-echo "Installing xcode-stuff"
-xcode-select --install
-
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
