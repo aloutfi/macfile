@@ -1,6 +1,6 @@
 Host * 
   AddKeysToAgent yes
-  User andrew
+  User mattisso
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
   ForwardAgent Yes

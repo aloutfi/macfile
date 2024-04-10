@@ -1,9 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-GITHUB_EMAIL = ''
-GITHUB_USER = '' # Your GitHub Username
-GITHUB_ORG = '' # Your GitHub Organization
+GITHUB_EMAIL='mattisso@atd-us.com'
+GITHUB_USER='mattisso'
 
 
 echo "Creating an SSH key for you..."
@@ -44,10 +43,8 @@ brew tap textualize/rich
 
 formulae=(
   docker
-  fzf
   gh
   htop
-  httpie
   jupyterlab
   jq
   helm
@@ -63,49 +60,22 @@ formulae=(
   pyenv-virtualenv
   rich
   speedtest-cli
-  streamlink
-  thefuck
   tilt
-  tldr
   tree
+  terraform
   wget
-  youtube-dl
 )
 
 brew install ${formulae[@]}
-
-# Enable useful key bindings and fuzzy completion
-$(brew --prefix)/opt/fzf/install
 
 # Install casks
 ### Get cask-versions for brave-browser-nightly
 brew tap homebrew/cask-versions
 
 casks=(
-  1password
-  anki
-  brave-browser-nightly
-  deluge
-  discord
   docker
   eul
-  github
-  google-drive
-  iterm2
-  macvim
-  microsoft-teams
-  notion
-  pycharm
-  raycast
-  runelite
-  signal
-  slack
-  spotify
-  tableplus
-  terraform
-  typora
   visual-studio-code
-  vlc
 )
 
 echo "installing apps with Cask..."
@@ -117,10 +87,6 @@ brew cleanup
 
 echo "set up workspace"
 mkdir -p  ~/WorkSpace/notebooks/data
-cd ~/WorkSpace
-# https://stackoverflow.com/a/32803025/9637992
-curl "https://api.github.com/orgs/$GITHUB_ORG/repos?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
-
 
 echo "Setting some Mac settings..."
 
