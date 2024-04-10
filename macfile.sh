@@ -3,9 +3,6 @@ set -euo pipefail
 
 GITHUB_EMAIL='mattisso@atd-us.com'
 GITHUB_USER='mattisso'
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Update homebrew recipes
 echo "Updating homebrew..."
 brew update
