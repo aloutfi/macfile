@@ -27,6 +27,9 @@ brew install git
 
 echo "Git config"
 
+# https://stackoverflow.com/a/60940131
+brew link --overwrite git
+
 git config --global user.name $GITHUB_USER
 git config --global user.email $GITHUB_EMAIL
 
@@ -81,21 +84,17 @@ brew tap homebrew/cask-versions
 casks=(
   1password
   anki
-  bettertouchtool
-  bartender
   brave-browser-nightly
   deluge
   discord
   docker
   eul
-  fig
   github
   google-drive
   iterm2
   macvim
   microsoft-teams
   notion
-  paw
   pycharm
   raycast
   runelite
